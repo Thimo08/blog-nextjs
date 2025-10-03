@@ -12,7 +12,7 @@ const MuralPage = () => {
         try {
             const response = await fetch('/api/messages');
             const data: Message[] = await response.json();
-            setMessages(data.reverse()); // Mostra as mais recentes primeiro
+            setMessages(data); // A API já ordena por mais recente
         } catch (error) {
             console.error('Erro ao carregar mensagens:', error);
         }
@@ -80,7 +80,14 @@ const MuralPage = () => {
                     {messages.map((msg, index) => (
                         <article key={msg.timestamp || index} className="mural-post-it">
                             <p>{msg.message}</p>
-                            <h4>- {msg.name}</h4>
+                            <div style={{ textAlign: 'right', marginTop: '10px' }}>
+                                <h4>- {msg.name}</h4>
+                                {msg.timestamp && (
+                                    <small style={{ color: '#888', fontSize: '0.8rem' }}>
+                                        {new Date(msg.timestamp).toLocaleString('pt-BR')}
+                                    </small>
+                                )}
+                            </div>
                         </article>
                     ))}
                 </div>
