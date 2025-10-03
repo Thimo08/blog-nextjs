@@ -35,7 +35,8 @@ const ObraPage: NextPage<ObraPageProps> = ({ obra }) => {
             </Head>
             <div className="obra-detalhe-container">
                 <div className="obra-capa">
-                    <Image src={obra.imagem} alt={`Capa do livro ${obra.titulo}`} width={500} height={600} style={{ objectFit: 'contain' }}/>
+                    {/* A alteração está aqui: objectFit foi alterado para 'cover' */}
+                    <Image src={obra.imagem} alt={`Capa do livro ${obra.titulo}`} width={500} height={600} style={{ objectFit: 'cover' }}/>
                 </div>
                 <div className="obra-info">
                     <span className="post-category">{obra.categoria}</span>
