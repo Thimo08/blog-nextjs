@@ -1,0 +1,44 @@
+/* src/styles/utils.module.css */
+
+/* Alinhamento de Texto */
+.textCenter {
+  text-align: center;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textRight {
+  text-align: right;
+}
+
+/* Margens e Espaçamentos */
+.marginTop0 {
+  margin-top: 0;
+}
+
+/* Visibilidade */
+.hidden {
+  display: none;
+}
+
+/* Estilos de Links */
+.link {
+  color: #e57373;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Classes para Cores (Exemplo) */
+.colorPrimary {
+  color: #3d3d3d;
+}
+
+.colorAccent {
+  color: #e57373;
+}

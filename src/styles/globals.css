@@ -1,0 +1,360 @@
+/* ---- GERAL E FONTES ---- */
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    background-color: #fdfaf5;
+    color: #3d3d3d;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden { display: none !important; }
+
+/* ---- CABEÇALHO (HEADER) ---- */
+.main-header {
+    background-color: #e57373;
+    background-image: url('/img/handmade-paper.png');
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header-link { text-decoration: none; color: white; }
+.main-header h1 { font-size: 5rem; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+.main-header h1 span { font-family: 'Merriweather', serif; font-size: 2rem; vertical-align: middle; }
+.main-header p { font-size: 1.2rem; margin: 10px 0 0; opacity: 0.9; }
+
+/* ---- POST EM DESTAQUE (VÍDEO) ---- */
+.featured-post { display: flex; flex-wrap: wrap; background-color: #ffffff; margin: 40px 0; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+.featured-post .post-content { flex: 1; padding: 40px; }
+.post-category { background-color: #f9a825; color: white; padding: 5px 10px; font-family: 'Merriweather', serif; font-size: 0.8rem; font-weight: 700; border-radius: 5px; display: inline-block; }
+.featured-post h2 { font-size: 3rem; margin: 20px 0; }
+.read-more { color: #e57373; text-decoration: none; font-weight: bold; transition: all 0.3s ease; }
+.read-more:hover { text-decoration: underline; letter-spacing: 0.5px; }
+
+/* ---- SEÇÃO DE BIOGRAFIA ---- */
+.bio-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+.bio-image {
+    flex: 1;
+    min-width: 250px;
+}
+.bio-image img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid #f9a825;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.bio-content {
+    flex: 2;
+    min-width: 300px;
+}
+.bio-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ---- GRID DO ATELIÊ (UNIFICADO) ---- */
+.section-title { text-align: center; font-size: 3.5rem; margin: 60px 0 30px; color: #5d4037; }
+.atelier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Estilos para os cards de artigo/quiz */
+.atelier-grid .post-card { background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.atelier-grid .post-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.atelier-grid .card-image { height: 200px; background-size: cover; background-position: center; }
+.atelier-grid .card-content { padding: 25px; }
+.atelier-grid .post-card h3 { font-size: 2.2rem; margin: 10px 0; }
+.atelier-grid .post-card p { font-size: 0.95rem; line-height: 1.6; }
+
+/* Estilos para o card do quiz */
+.atelier-grid .interactive-card { background-color: #81c784; background-image: url('/img/checkered-light.png'); color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+.atelier-grid .interactive-card .post-category { background-color: #fff; color: #5d4037; }
+.atelier-grid .interactive-card h3 { color: white; }
+.read-more-interactive { background-color: white; color: #5d4037; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; transition: all 0.3s ease; }
+.read-more-interactive:hover { background-color: #f9a825; color: white; transform: scale(1.05); }
+
+/* --- ESTILOS PARA OS CARDS DE OBRA (COM IMAGENS PADRONIZADAS) --- */
+.atelier-grid .obra-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex; /* Adicionado para alinhar conteúdo interno */
+    flex-direction: column; /* Adicionado para alinhar conteúdo interno */
+}
+.atelier-grid .obra-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.atelier-grid .obra-card img {
+    width: 100%;
+    height: 350px; /* ALTURA FIXA PARA TODAS AS IMAGENS */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.atelier-grid .obra-card h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    margin: 15px 0 10px;
+    color: #3d3d3d;
+}
+
+/* ---- PÁGINA DE ARTIGO E BIOGRAFIA ---- */
+.full-article { max-width: 800px; margin: 40px auto; }
+.full-article h1 { font-size: 4rem; text-align: center; }
+.full-article .post-category { display: block; text-align: center; margin-bottom: 20px; }
+.article-main-image { width: 100%; border-radius: 10px; margin: 20px 0; }
+.full-article h2 { font-size: 3rem; color: #e57373; margin-top: 40px; }
+.full-article p { font-size: 1.1rem; line-height: 1.8; }
+.full-article blockquote { border-left: 4px solid #f9a825; padding-left: 20px; margin: 30px 0; font-style: italic; font-size: 1.2rem; }
+.back-link { display: inline-block; margin-top: 40px; color: #e57373; text-decoration: none; font-weight: bold; }
+.back-link:hover { text-decoration: underline; }
+
+/* ---- PÁGINA DO QUIZ ---- */
+.quiz-container { background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); text-align: center; max-width: 700px; margin: 40px auto; }
+.quiz-container h2 { font-size: 3.5rem; margin-bottom: 10px; }
+.quiz-container p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; }
+.quiz-container button { font-family: 'Amatic SC', cursive; font-size: 2rem; font-weight: 700; background-color: #e57373; color: white; border: none; padding: 15px 40px; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; }
+.quiz-container button:hover { background-color: #d32f2f; transform: scale(1.05); }
+#question-text { font-size: 2.8rem; margin-bottom: 30px; color: #5d4037; }
+.btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.btn-grid button { width: 100%; padding: 20px; font-size: 1.5rem; background-color: #81c784; }
+.btn-grid button:hover { background-color: #66bb6a; }
+#quiz-results h2 { color: #5d4037; }
+#result-character-name { font-size: 4rem; margin: 10px 0; color: #e57373; }
+#result-character-image { max-width: 200px; border-radius: 50%; margin: 20px 0; border: 5px solid #f9a825;}
+.quiz-back-link { display: block; margin-top: 25px; font-size: 1rem; }
+
+/* ---- PÁGINA DE DETALHES DA OBRA ---- */
+.obra-detalhe-container { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px; align-items: flex-start; }
+.obra-capa { flex: 1; min-width: 250px; }
+.obra-capa img { width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.obra-info { flex: 2; min-width: 300px; }
+.obra-info h1 { font-size: 4.5rem; margin: 0 0 20px; line-height: 1; }
+.obra-info h2 { font-size: 3rem; color: #e57373; margin-top: 30px; }
+.obra-info ul { list-style: none; padding: 0; }
+.obra-info ul li { font-size: 1.1rem; padding: 5px 0; border-bottom: 1px solid #eee; }
+.obra-info ul li::before { content: '■'; color: #f9a825; margin-right: 10px; }
+
+/* ---- RODAPÉ (FOOTER) ---- */
+.main-footer { background-color: #5d4037; color: #fdfaf5; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; }
+.main-footer p { margin: 5px 0; }
+
+
+/* ---- BARRA DE NAVEGAÇÃO ---- */
+.main-nav {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #555;
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #e57373;
+}
+
+.main-nav a.active {
+    color: #e57373;
+    font-weight: bold;
+}
+
+/* ---- PÁGINA MURAL DE MENSAGENS ---- */
+.mural-container { text-align: center; }
+.mural-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; justify-items: center; }
+.mural-post-it {
+    background-color: #fffbe9;
+    padding: 20px;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.1);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    text-align: left;
+}
+.mural-post-it:nth-child(2n) {
+    transform: rotate(2deg);
+}
+.mural-post-it:nth-child(3n) {
+    transform: rotate(-1.5deg);
+}
+.mural-post-it:nth-child(4n) {
+    transform: rotate(2.5deg);
+}
+.mural-post-it:hover {
+    transform: rotate(0) scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+.mural-post-it p {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+.mural-post-it h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.8rem;
+    margin: 15px 0 0;
+    text-align: right;
+    color: #5d4037;
+}
+
+/* ---- ÍCONES DE MÍDIA SOCIAL (FOOTER) ---- */
+.social-media {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #7a5f54;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #8d8d8d;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    background-color: #e57373;
+    transform: translateY(-3px);
+}
+
+/* ---- ESTILOS DO FORMULÁRIO DO MURAL (VERSÃO MELHORADA) ---- */
+.mural-form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    border: 1px solid #f0e9e9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mural-form-container h4 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #5d4037;
+}
+
+#message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#message-form input,
+#message-form textarea {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    color: #3d3d3d;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#message-form input::placeholder,
+#message-form textarea::placeholder {
+    color: #aaa;
+}
+
+#message-form input:focus,
+#message-form textarea:focus {
+    outline: none;
+    border-color: #e57373;
+    box-shadow: 0 0 0 3px rgba(229, 115, 115, 0.2);
+}
+
+#message-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#message-form button {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #e57373;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center;
+    margin-top: 10px;
+}
+
+#message-form button:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
