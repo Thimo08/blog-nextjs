@@ -3,8 +3,7 @@ import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-sv
 
 const Footer = () => (
   <footer className="main-footer">
-    <p>Blog criado para a SELIBI 2025.</p>
-    <p>Uma homenagem à obra de André Neves.</p>
+    <p>&copy; Desenvolvido por Thimótio Jeronimo</p>
     <div className="social-media">
       <a href="https://www.facebook.com/andreneves.ilustrador" target="_blank" rel="noopener noreferrer" aria-label="Facebook de André Neves">
         <FontAwesomeIcon icon={faFacebookF} />
