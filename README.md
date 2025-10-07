@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ateliê de Histórias - Um Mergulho no Universo de André Neves
 
-## Getting Started
+## Sobre o Projeto
 
-First, run the development server:
+O "Ateliê de Histórias" é um blog interativo e imersivo, totalmente dedicado a celebrar a vida e a obra do talentoso escritor e ilustrador brasileiro André Neves. Este projeto foi criado como uma homenagem, buscando oferecer um espaço digital que capture a essência mágica e a profundidade artística de suas criações.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Aqui, os visitantes podem explorar desde a biografia do autor, mergulhando em suas raízes nordestinas que tanto influenciam sua arte, até uma galeria detalhada de suas obras, com sinopses, temas e análises sobre suas ilustrações únicas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Imagem do Site
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![image](./public/img-site/img-andre.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🚀 Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+O projeto foi desenvolvido com diversas seções interativas para proporcionar a melhor experiência aos fãs de André Neves:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **🏠 Home:** Uma página inicial que introduz o visitante ao universo do autor.
+* **👤 Biografia do Autor:** Uma página dedicada à trajetória de André Neves, suas inspirações e prêmios.
+* **📚 Galeria de Obras:** Uma seção completa com as capas e detalhes dos livros, onde cada obra possui sua própria página com sinopse e análise da ilustração.
+* **🎨 Artigos e Análises:** Artigos que exploram as técnicas de colagem, o uso das cores e as mensagens profundas presentes nas histórias.
+* **✨ Quiz Interativo:** Uma divertida ferramenta para que os leitores descubram com qual personagem do universo de André Neves eles mais se parecem.
+* **📌 Mural de Mensagens:** Um espaço para que os visitantes possam deixar seus recados e compartilhar seu carinho pelo autor e suas obras.
+* **💡 Curiosidades:** Uma seção com fatos interessantes sobre o processo criativo e os segredos por trás das histórias.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tecnologias Utilizadas
 
-## Deploy on Vercel
+Este projeto foi construído com tecnologias modernas para garantir uma experiência de usuário fluida e agradável:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* **Next.js:** Para uma renderização otimizada e navegação rápida.
+* **React:** Para a construção de interfaces de usuário dinâmicas e interativas.
+* **TypeScript:** Para um desenvolvimento mais seguro e robusto.
+* **PostgreSQL:** Utilizado no backend para o funcionamento do Mural de Mensagens.
+* **Vercel:** Para o deploy e hospedagem do projeto.
+* **Font Awesome:** Para a utilização de ícones nas redes sociais.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Como Executar o Projeto
+
+Para acessar o site só seguir o link abaixo:
+
+1.https://blog-nextjs-coral-psi.vercel.app/
+
+## ✍️ Autores
+
+Este blog foi idealizado e desenvolvido por:
+
+* **Thimótio Jeronimo:** [GitHub](https://github.com/thimo08)
